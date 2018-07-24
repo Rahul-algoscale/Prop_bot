@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Rahul-algoscale/Prop_bot/issues"
   },
-  "homepage": "https://github.com/Rahul-algoscale/Prop_bot#readme"
+  "homepage": "https://github.com/Rahul-algoscale/Prop_bot#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
