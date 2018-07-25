@@ -56,6 +56,15 @@ app.get('/articles/add', function(req, res){
   });
 });
 
+// Add single article
+app.get('/article/:id', function(req, res){
+    Article.findById(req.params.id, function(err, article){
+      res.render('article', {
+        article:article
+      });
+    });
+});
+
 //Add Submit POST Route
 app.post('/articles/add', function(req, res){
   let article = new Article();
