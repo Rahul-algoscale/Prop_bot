@@ -65,6 +65,7 @@ app.get('/article/:id', function(req, res){
     });
 });
 
+
 //Add Submit POST Route
 app.post('/articles/add', function(req, res){
   let article = new Article();
@@ -82,6 +83,15 @@ app.post('/articles/add', function(req, res){
 
 });
 
+// edit a article
+app.get('/article/edit/:id', function(req, res){
+  console.log('inside the function')
+  Article.findById(req.params.id, function(err, article){
+    res.render('edit_article', {
+      article:article
+    });
+  });
+});
 
 // Start Server
 app.listen(3000, function(){
